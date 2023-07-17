@@ -8,13 +8,31 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        Not rendered
+    </div>
 </body>
-<script>
+<!-- <script>
     const heading = document.createElement("h1")
-    heading.innerHTML = "Namaste Duniya"
+    heading.innerHTML = "Namaste Duniya from js"
     const root = document.getElementById("root")
     root.appendChild(heading)
+</script> -->
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+<!-- below link give access to react-dom -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+    // {}=> is used for assign parameter
+    const heading = React.createElement("h1", {
+        id: "title"
+    }, "Namaste Duniya from React.js");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    // passing a react element inside the root
+    root.render(heading)
 </script>
 
 </html>
