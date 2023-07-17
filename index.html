@@ -26,13 +26,29 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <script>
-        // {}=> is used for assign parameter
-        const heading = React.createElement("h1", {
-            id: "title"
-        }, "Namaste Duniya from React.js");
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        // passing a react element inside the root
-        root.render(heading)
+        // // {}=> is used for assign parameter
+        // const heading = React.createElement("h1", {
+        //     id: "title"
+        // }, "Namaste Duniya from React.js");
+        // const root = ReactDOM.createRoot(document.getElementById("root"));
+        // // passing a react element inside the root
+        // root.render(heading)
+
+        // creating multing heading inside container
+
+        const heading1 = React.createElement("h1", {
+            id: "title",
+        }, "heading 1");
+        const heading2 = React.createElement("h2", {
+            id: "title",
+        }, "heading 2");
+
+        const div = React.createElement("div", {
+            id: "container"
+        }, [heading1, heading2])
+
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(div)
     </script>
 </body>
 
