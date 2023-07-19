@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Vikalp-Mishra03/food_app/issues"
   },
-  "homepage": "https://github.com/Vikalp-Mishra03/food_app#readme"
+  "homepage": "https://github.com/Vikalp-Mishra03/food_app#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
 }
