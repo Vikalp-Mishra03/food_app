@@ -1,0 +1,19 @@
+{
+  "name": "react-complete",
+  "version": "1.0.0",
+  "description": "here i am learning react for job",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vikalp-Mishra03/food_app.git"
+  },
+  "author": "Vikalp Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vikalp-Mishra03/food_app/issues"
+  },
+  "homepage": "https://github.com/Vikalp-Mishra03/food_app#readme"
+}
