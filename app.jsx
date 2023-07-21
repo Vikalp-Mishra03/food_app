@@ -7,10 +7,12 @@ const Heading = () => (
     <h1 id="title" key="h2">Hello Everynan</h1>
 );
 // its react Element
-const title = (
+const Title = (
     <h1 id="title" key="h2">Hello Everynan</h1>
 );
 let hei = 9 + 8;
+
+// this is component Composition
 const Header = () => {
     return (
         <>
@@ -20,7 +22,7 @@ const Header = () => {
             {Heading()}
 
             {/* to call react element */}
-            {title}
+            {Title}
             <h1>Hello functional component</h1>
         </>
     )
