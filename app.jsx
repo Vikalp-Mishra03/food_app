@@ -21,6 +21,8 @@ const HeaderComponent = () => {
     )
 }
 
+
+// config driven UI
 const RestrautList = [
 
     {
@@ -715,25 +717,30 @@ const RestrautList = [
 ];
 
 
-const RestrautCard = (props) => {
+const RestrautCard = ({ cloudinaryImageId, name, cuisines, lastMileTravelString }) => {
     return (
         <div className="card">
-            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + props.restaurant.data?.cloudinaryImageId} alt="" />
-            <h2>{props.restaurant.data?.name}</h2>
-            <h3>{props.restaurant.data?.cuisines.join(", ")}</h3>
-            <h4>{props.restaurant.data?.lastMileTravelString} minutes</h4>
+            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} alt="" />
+            <h2>{name}</h2>
+            <h3>{cuisines.join(", ")}</h3>
+            <h4>{lastMileTravelString} minutes</h4>
         </div>
     )
 }
 const Body = () => {
     return (
         <div className="restrant-list">
-            <RestrautCard restaurant = {RestrautList[0]}/>   
-            <RestrautCard restaurant = {RestrautList[1]}/>     
-            <RestrautCard restaurant = {RestrautList[2]}/>     
-            <RestrautCard restaurant = {RestrautList[3]}/>   
-            <RestrautCard restaurant = {RestrautList[4]}/>   
-            <RestrautCard restaurant = {RestrautList[5]}/>   
+            {
+                RestrautList.map((restaurant) => {
+                    return <RestrautCard {...restaurant.data} key={restaurant.data.id} />
+                })
+            }
+            {/* <RestrautCard {...RestrautList[0].data} />
+            <RestrautCard {...RestrautList[1].data} />
+            <RestrautCard {...RestrautList[2].data} />
+            <RestrautCard {...RestrautList[3].data} />
+            <RestrautCard {...RestrautList[4].data} />
+            <RestrautCard {...RestrautList[5].data} /> */}
         </div>
     )
 }
