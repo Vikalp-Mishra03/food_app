@@ -18,3 +18,26 @@ header {
 .logo{
     width: 100px;
 }
+
+.card{
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.card img{
+    width: 100%;
+}
+
+.restrant-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card h2{
+    font-size: 16px;
+}
