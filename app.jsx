@@ -9,7 +9,7 @@ const Title = (
 const Header = () => {
     return (
         <>
-
+{Title()}
         </>
     )
 };
