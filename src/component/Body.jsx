@@ -16,8 +16,15 @@ export default function Body() {
     const [searchText, setSearchText] = useState('')   // it use to create state variable98u
 
     useEffect(() => {
-
+        // API call
+        getrestaurants()
     }, [])
+
+    async function getrestaurants(){
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.1774553&lng=78.0077653&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const json = await data.json()
+        console.log(json)
+    }
     return (
         <>
             <div className="search-container">
