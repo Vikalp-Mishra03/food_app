@@ -1,7 +1,7 @@
 import React from 'react'
 import RestrautCard from "./RestrautCard"
 import { RestrautList } from "../config"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function filterData(searchText, restaurant) {
     const filterData = restaurant.filter((restaurant) =>
@@ -14,6 +14,10 @@ export default function Body() {
 
     // searchText is a local state variable
     const [searchText, setSearchText] = useState('')   // it use to create state variable98u
+
+    useEffect(() => {
+
+    }, [])
     return (
         <>
             <div className="search-container">
