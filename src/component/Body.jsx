@@ -24,6 +24,8 @@ export default function Body() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.1774553&lng=78.0077653&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json()
         console.log(json)
+        // optional chaining
+        // setRestaurant(json?.data?.cards[2]?.card?.card)
     }
     return (
         <>
